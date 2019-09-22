@@ -1,0 +1,128 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body class="">
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form role="form" class="stepper-form" action="javascript:void(0);">
+                    <fieldset>
+                        <div class="form-inside col-md-12">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!-- space for your first content -->
+
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-next">Next</button>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <h3 class="heading-strip m-0">
+                            Store Images
+                        </h3>
+                        <div class="form-inside">
+
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <!--Space for second content-->
+                                    <div class="file-upload2 col-md-5 col-sm-6">
+                                        <h4 class="oodles-color">Upload a Store Image</h5>
+                                            <p class="oodles-color"><em>( Our friendly suggestion: FRONT OF YOUR STORE IMAGE)</em>
+                                            </p>
+                                            <div class="image-upload-wrap2">
+                                                <input class="file-upload-input2" type='file' onchange="readURL2(this);" accept="image/*" />
+                                                <div class="drag-text2">
+                                                    <h3>Drag and drop a file or select add Image</h3>
+                                                </div>
+                                            </div>
+                                            <div class="file-upload-content2">
+                                                <img class="file-upload-image2" src="#" alt="your image" />
+                                                <div class="image-title-wrap2">
+                                                    <button type="button" onclick="removeUpload2()" class="remove-image2">Remove <span class="image-title2"></span></button>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary btn-block" type="button" onclick="$('.file-upload-input2').trigger( 'click' )">Upload Image</button>
+                                            <button class="btn btn-link btn-block" type="button" onclick="$('.file-upload-input2').trigger( 'click' )">Select from Image Lib</button>
+
+                                    </div>
+
+                                    <div class="file-upload1 col-md-5 col-sm-6 col-md-offset-1">
+                                        <h4 class="oodles-color">Upload your Store Logo</h5>
+                                            <p class="oodles-color"><em>( If you don't have a logo you can upload something you would like us to use as a logo.)</em>
+                                            </p>
+                                            <div class="image-upload-wrap1">
+                                                <input class="file-upload-input1" type='file' onchange="readURL1(this);" accept="image/*" />
+                                                <div class="drag-text1">
+                                                    <h3>Drag and drop a file or select add Image</h3>
+                                                </div>
+                                            </div>
+                                            <div class="file-upload-content1">
+                                                <img class="file-upload-image1" src="#" alt="your image" />
+                                                <div class="image-title-wrap1">
+                                                    <button type="button" onclick="removeUpload1()" class="remove-image1">Remove <span class="image-title1"></span></button>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary btn-block" type="button" onclick="$('.file-upload-input1').trigger( 'click' )">Upload Image</button>
+                                            <button class="btn btn-link btn-block" type="button" onclick="$('.file-upload-input1').trigger( 'click' )">Select from Image Lib</button>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <button type="button" class="btn btn-previous">Previous</button>
+                            <button type="submit" class="btn pull-right">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <!-- start:: stripe components -->
+
+        <script>
+            $(function() {
+
+
+            });
+        </script>
+
+</body>
+
+</html>

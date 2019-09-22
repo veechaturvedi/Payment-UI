@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- start::stripe methods -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script src="stripe/js/index.js" data-rel-js=""></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="stripe/css/base.css" data-rel-css="">
+
+    <!-- CSS for each example: -->
+    <link rel="stylesheet" type="text/css" href="stripe/css/example1.css" data-rel-css="">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Payment UI</h1>
+
+                <button class="btn btn-defalt" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Payment-plan
+      </button>
+                <div class="collapse" id="collapseExample">
+                    <div class="well">
+                        <div class="row payment-method">
+
+
+                            <p class="col-md-12 heading"> Choose a payment Method <small>(Click one of the option below)</small> </p>
+
+
+                            <div class="col-xs-6 col-md-3">
+                                <label>
+                                    <input type="radio" name="payment-option" value="" id="payone" >
+                                    <a class="thumbnail">
+                                        <img src="assets/images/ach.png" alt="Pay with ACH">
+        
+                                    </a>
+                                    <div class="col-md-12 text-center">
+                                        <span class="card-text">Pay with ACH</span>
+                                    </div>
+                                    </label>
+                            </div>
+
+
+                            <div class="col-xs-6 col-md-3">
+                                <label>
+                                    <input type="radio" name="payment-option" value="" id="paytwo"  class="sr-only">
+                                
+                                <a class="thumbnail">
+                                    <img src="assets/images/credit-card.png" alt="Pay with Credit Card">
+
+                                </a>
+                                <div class="col-md-12 text-center">
+                                    <span class="card-text">Pay with Credit Card</span>
+                                </div>
+                            </label>
+                            </div>
+
+
+                            <div class="col-xs-6 col-md-3">
+                                <label>
+                                    <input type="radio" name="payment-option" value="" id="paythree"  class="sr-only">
+                                
+                                <a class="thumbnail">
+                                    <img src="assets/images/applepay.png" alt="Pay with Apple Pay">
+
+                                </a>
+                                <div class="col-md-12 text-center">
+                                    <span class="card-text">Pay with ApplePay</span>
+                                </div>
+                                </label>
+                            </div>
+
+
+                            <div class="col-xs-6 col-md-3">
+                                <label>
+                                    <input type="radio" name="payment-option" value="" id="payfour"  class="sr-only">
+                                <a class="thumbnail">
+                                    <img src="assets/images/gpay.png" alt="Pay with Google Pay">
+
+                                </a>
+                                <div class="col-md-12 text-center">
+                                    <span class="card-text">Pay with GooglePay</span>
+                                </div>
+                                </label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <hr class="hr-dotted">
+
+                            <div class="col-md-12">
+                                <p class="text-center mb10"> Click the button Below to be redirected to <strong>GooglePay</strong> website/app. </p>
+                                <button class="btn btn-oodles text-center" id="setupPayment">Pay with GooglePay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- c-one -->
+
+    </div>
+    <div class="container-fluid payee-details">
+        <div class="row chs-container display-none">
+            <div class="col-md-7 col-sm-6 ">
+                <!--Example 1-->
+                <div class="cell example example1" id="example-2">
+                    <form>
+                        <fieldset>
+                            <div class="row">
+                                <label for="account-holder" data-tid="">Account Holder Name</label>
+                                <input id="account-holder" data-tid="" type="text" placeholder="Vivek Chaturvedi" required="" autocomplete="name">
+                            </div>
+                            <div class="row">
+                                <label for="routing-number" data-tid="">Routing Number</label>
+                                <input id="routing-number" data-tid="" maxlength="9" type="number" placeholder="999999999" required="" autocomplete="routingNumber">
+                            </div>
+                            <div class="row">
+                                <label for="account-number" data-tid="">Account Number</label>
+                                <input id="account-number" data-tid="" maxlength="16" minlength="11" type="number" placeholder="01234567890" required="" autocomplete="AccountNumber">
+                            </div>
+                        </fieldset>
+                        <button type="submit" data-tid="elements_examples.form.pay_button">Pay $25</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- k-two -->
+        <div class="row card-container display-none">
+            <div class="col-md-7 col-sm-6 ">
+                <!--Example 1-->
+                <div class="cell example example1" id="example-1">
+                    <form>
+                        <fieldset>
+                            <div class="row">
+                                <label for="example1-name" data-tid="elements_examples.form.name_label">Name</label>
+                                <input id="example1-name" data-tid="elements_examples.form.name_placeholder" type="text" placeholder="Jane Doe" required="" autocomplete="name">
+                            </div>
+                            <div class="row">
+                                <label for="example1-email" data-tid="elements_examples.form.email_label">Email</label>
+                                <input id="example1-email" data-tid="elements_examples.form.email_placeholder" type="email" placeholder="janedoe@gmail.com" required="" autocomplete="email">
+                            </div>
+                            <div class="row">
+                                <label for="example1-phone" data-tid="elements_examples.form.phone_label">Phone</label>
+                                <input id="example1-phone" data-tid="elements_examples.form.phone_placeholder" type="tel" placeholder="(941) 555-0123" required="" autocomplete="tel">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="row">
+                                <div id="example1-card"></div>
+                            </div>
+                        </fieldset>
+                        <button type="submit" data-tid="elements_examples.form.pay_button">Pay $25</button>
+                        <!-- <div class="error" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                            <path class="base" fill="#000" d="M8.5,17 C3.80557963,17 0,13.1944204 0,8.5 C0,3.80557963 3.80557963,0 8.5,0 C13.1944204,0 17,3.80557963 17,8.5 C17,13.1944204 13.1944204,17 8.5,17 Z"></path>
+                            <path class="glyph" fill="#FFF" d="M8.5,7.29791847 L6.12604076,4.92395924 C5.79409512,4.59201359 5.25590488,4.59201359 4.92395924,4.92395924 C4.59201359,5.25590488 4.59201359,5.79409512 4.92395924,6.12604076 L7.29791847,8.5 L4.92395924,10.8739592 C4.59201359,11.2059049 4.59201359,11.7440951 4.92395924,12.0760408 C5.25590488,12.4079864 5.79409512,12.4079864 6.12604076,12.0760408 L8.5,9.70208153 L10.8739592,12.0760408 C11.2059049,12.4079864 11.7440951,12.4079864 12.0760408,12.0760408 C12.4079864,11.7440951 12.4079864,11.2059049 12.0760408,10.8739592 L9.70208153,8.5 L12.0760408,6.12604076 C12.4079864,5.79409512 12.4079864,5.25590488 12.0760408,4.92395924 C11.7440951,4.59201359 11.2059049,4.59201359 10.8739592,4.92395924 L8.5,7.29791847 L8.5,7.29791847 Z"></path>
+                          </svg> -->
+                        <span class="message"></span></div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- k-three -->
+    <div class="clearfix"></div>
+    <div class="row apay-container display-none text-center">
+        <div class="col-md-7 col-sm-6 content-apay">
+            <p class="col-md-12 heading">Click below button to make your payment through Apple Pay: </p>
+            <button id="apple-pay-button" class="btn btn-primary">
+                    <img src= "Assets/images/apay-icon.png" alt="apple pay" style="height: 33px; "/> &nbsp;
+                </button>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <!-- c-four -->
+    <div class="row gpay-container display-none text-center">
+        <div class="col-md-7 col-sm-6 content-gpay">
+            <p class="col-md-12 heading">Click below button to make your payment through Google Pay: </p>
+            <button id="google-pay-button" class="btn btn-primary">
+                    <img src= "Assets/images/gpay-icon.png" alt="apple pay" style="height: 30px;"/> &nbsp;
+                </button>
+        </div>
+    </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- start:: stripe components -->
+    <!-- Simple localization script for Stripe's examples page. -->
+    <script src="stripe/js/l10n.js" data-rel-js></script>
+
+    <!-- Scripts for each example: -->
+    <script src="stripe/js/example1.js" data-rel-js></script>
+
+    <script>
+        $(function() {
+
+
+        });
+    </script>
+</body>
+
+</html>
